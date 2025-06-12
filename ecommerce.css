@@ -1,0 +1,4 @@
+.mainFolder {
+    display: flex;
+    flex-direction: column;
+}
