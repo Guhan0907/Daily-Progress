@@ -117,23 +117,3 @@
     align-items: center;
     margin-top: 1em;
 }
-
-/* #animatedElement {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: relative;
-}
-
-.animate {
-  animation: moveElement 1s linear forwards;
-}
-
-@keyframes moveElement {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 200px;
-  }
-} */
