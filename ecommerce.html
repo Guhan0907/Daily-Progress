@@ -3,20 +3,160 @@
 <head >
     <title> E-Commerce </title>
     <link rel="stylesheet" href="ecommerce.css">
+    <script src="ecommerce.js"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-
+<body onload="checkingTheLoading()">
     <div class="mainFile">
+
+<!-- this is the header file -->
         <div class="headerFolder">
-            <h1> hello</h1>
+            
+            <h3 class="logoName"> Shopping </h3>
+
+            <div class="headerFile">
+                <ul>
+                    <li> Home</li>
+                    <li> Products</li>
+                    <li id="cartValues"> 0 </li>
+                </ul>
+            </div>
+
         </div>
         
-        <div class="footerFolder">
-            <h2> this is</h2>
+         <div class="searchFolder">
+                <input type="text" id="inputField" placeholder="Enter a value">
+                <button id="submitBtn" onclick="handleSubmitBtn()  "> Seatrch </button>
         </div>
+
+        <!-- body content -->
+        <div class="bodyFolder">
+            <div class="itemListsHeading">
+                <h2 onmouseover="consoleValue()"> Products</h2>
+                <button id="checking"> Buttons-Values</button>
+            </div>
+
+
+            <div class="itemLists">
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <button id="addToCartOption"> Cart </button>
+                    </div>
+                </div>
+
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+
+                <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <label> Electicals </label>
+                    </div>
+                </div>
+
+                 <div class="electricalItems">
+                   
+                    <div class="electricalItemsTop">
+                         <span> Electicals </span>
+                    </div>
+
+                    <div class="electricalItemsBottom">
+                        <button id="animationButtom"> POP </button>
+                    </div>
+                </div>
+
+
+               
+
+            </div>
+
+               
     </div>
 
 </body>
