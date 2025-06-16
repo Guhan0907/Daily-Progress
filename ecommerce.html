@@ -10,7 +10,6 @@
 <body onload="checkingTheLoading()">
     <div class="mainFile">
 
-<!-- this is the header file -->
         <div class="headerFolder">
             
             <h3 class="logoName"> Shopping </h3>
@@ -30,7 +29,13 @@
                 <button id="submitBtn" onclick="handleSubmitBtn()  "> Seatrch </button>
         </div>
 
-        <!-- body content -->
+
+        <div class="startBtnFolder"> 
+            <button id="discountBtn">See discounts</button>
+            <p id="ansPlace"> hello </p>
+        </div>
+
+
         <div class="bodyFolder">
             <div class="itemListsHeading">
                 <h2 onmouseover="consoleValue()"> Products</h2>
@@ -174,3 +179,48 @@
 </body>
 
 </html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecommerce Website </title>
+</head>
+<body>
+  <button id="startBtn">Start Task</button>
+  <p id="result"></p>
+
+  <script>
+
+    function asyncTask() {
+      return new Promise((resolve, reject) => {
+        
+        setTimeout(() => {
+          const success = Math.random() > 0.5;  
+          if (success) {
+            resolve("Task completed successfully!");
+          } else {
+            reject("Task failed. Please try again.");
+          }
+        }, 2000);
+      });
+    }
+
+    const button = document.getElementById("startBtn");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", () => {
+      result.textContent = "Processing...";
+      
+      asyncTask()
+        .then(message => {
+          result.textContent = message;  
+        })
+        .catch(error => {
+          result.textContent = error;   
+        });
+    });
+  </script>
+</body>
+</html> -->
+

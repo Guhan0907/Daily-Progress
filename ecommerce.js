@@ -160,3 +160,44 @@ const[ck , ...ty] = my;
 console.log(ty)
 }
 
+
+
+
+function asynTask() {
+  return new Promise((resolve , reject) => {
+    setTimeout(() => {
+      const success = Math.random() > 0.5;  
+      if (success) {
+        resolve("Discount Found completed successfully!");
+      } else {
+        reject("Task failed. No more discounts.");
+      }
+    }, 2000);
+  })
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+const discountButton = document.getElementById("discountBtn");
+const ansBtn = document.getElementById("ansPlace");
+
+if (discountButton && ansBtn) {
+    discountButton.addEventListener("click", () => {
+  ansBtn.textContent = 'Finding discounts...';
+  console.log("Button ---- Pressed");
+
+  asynTask()
+  .then(message => {
+    ansBtn.textContent = message;
+  })
+  .catch(error => {
+    ansBtn.textContent = error;
+  })
+})
+}
+else {
+  console.error("Error: 'discountBtn' or 'ansPlace' element not found.");
+}
+
+})
+
