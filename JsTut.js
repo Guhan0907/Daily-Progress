@@ -127,8 +127,95 @@ const val = [1,2,3,7,8];
 //     console.log(ans)
 // })
 
-const dp = val.filter(x => x>3)
-console.log(dp)
+// const dp = val.filter(x => x>3)
+// console.log(dp)
+
+
+// the below program to understang the call 
+// function foo() {
+//     throw new Error("Try for an Error occured !");
+// }
+// function buzz() {
+//     foo();
+// }
+// function baz() {
+//     buzz()
+// }
+// baz()
+
+// function foo() {
+//     foo()
+// }
 
 
 
+function hello() {
+    this.name = "hello";
+    console.log(this);
+    // this.setInterval(() => {})
+}
+
+const arrowHello = () => {
+    // setInterval()
+    this.name = "arrow function"
+    console.log(this);
+}
+
+// hello(); // 'this' refers to the global object (or undefined in strict mode)
+// arrowHello(); // 'this' refers to the lexical scope, which is the global object in this case
+
+// console.log(this.name); // 'this' refers to the global object (or undefined in strict mode)
+
+
+function outerFunction() {
+    let t =0 ;
+    function innerFunction() {
+        t++;
+        console.log("because of",t)
+    } 
+    innerFunction();
+    // return innerFunction;
+    return () => 1;
+}
+
+// const myInnerFunction = outerFunction();
+// const anotherInnerFunction = outerFunction();
+
+// console.log("return", typeof anotherInnerFunction)
+// anotherInnerFunction()
+// // myInnerFunction;
+// myInnerFunction();
+// () => myInnerFunction();
+
+// console.log(myInnerFunction()); 
+
+
+// function test(cb){
+//     cb();
+// }
+
+// const obj = {
+//     name: "fir_name",
+//     lname: "last_name",
+//     age: "20",
+//     func: function(){
+//         console.log("func:", this);
+//         test(() =>{
+//             console.log("callback:", this);
+//         });
+//     }
+// }
+
+// obj.func();
+
+function callback(c) {
+    console.log("Callback", c)
+}
+
+function hello(b) {
+    console.log("Hello", b);
+    b();
+
+}
+
+hello(()=> callback(1+1));
